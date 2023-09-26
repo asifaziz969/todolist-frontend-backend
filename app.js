@@ -1,19 +1,14 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  
-    var today= new Date();
-    if (today.getDay()===0 || today.getDay()===6)
-    {
-        res.send("horayyyyyy")
-    }
-    else{
-        res.send("uff hooo")
-    }
-})
+    var my = "ihdfdsuf";
+    res.render('list', { today: my });
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Example app listening on port ${port}`);
+});
