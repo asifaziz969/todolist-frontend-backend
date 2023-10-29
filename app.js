@@ -14,7 +14,7 @@ const port = 5000;
 // Middleware to parse request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect("mongodb://localhost:27017/todolistDB"); //connection ,it is db
+mongoose.connect("mongodb+srv://asif:asif@cluster0.1umxkr2.mongodb.net/todolistDB"); //connection ,it is db
 
 const itemsSchema = {
   //schema
