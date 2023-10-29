@@ -78,7 +78,12 @@ const formattedDate = currentDate.toLocaleDateString("en-US", option);
 app.post("/", (req, res) => {
   const inputData = req.body.newItem;
 
-  items.push(inputData);
+  const item = new Item({
+    name: inputData,
+  });
+  item.save();
+
+  // items.push(inputData);
 
   // Redirect to the root path after adding a new item
   res.redirect("/");
